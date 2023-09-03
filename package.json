@@ -30,7 +30,15 @@
     "pr-ready": "pnpm run format && pnpm run lint-with-autofix && pnpm run test-with-coverage && pnpm run build",
     "ci-test": "pnpm run lint && pnpm run test"
   },
-  "keywords": [],
+  "keywords": [
+    "fs",
+    "file",
+    "structure",
+    "walker",
+    "glob",
+    "path",
+    "pattern"
+  ],
   "author": "OlehDutchenko <dutchenko.o.dev@gmail.com>",
   "license": "BSD 3-Clause License",
   "bugs": {
