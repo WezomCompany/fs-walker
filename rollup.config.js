@@ -32,5 +32,5 @@ export default {
 		},
 	],
 	plugins: [typescript(), terser()],
-	external: ['glob', 'from-cwd'],
+	external: ['glob', 'from-cwd', 'node:fs', 'node:path'],
 };
