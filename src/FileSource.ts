@@ -32,4 +32,8 @@ export class FileSource {
 	exists(): boolean {
 		return fs.existsSync(this.source) && fs.lstatSync(this.source).isFile();
 	}
+
+	getDirPath(): string {
+		return path.dirname(this.source);
+	}
 }
