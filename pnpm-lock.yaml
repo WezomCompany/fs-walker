@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  from-cwd:
+    specifier: ^1.0.1
+    version: 1.0.1
+
 devDependencies:
   '@rollup/plugin-terser':
     specifier: ^0.4.3
@@ -1865,6 +1870,10 @@ packages:
       combined-stream: 1.0.8
       mime-types: 2.1.35
     dev: true
+
+  /from-cwd@1.0.1:
+    resolution: {integrity: sha512-rKM9aAkgRTEl7NxxLOa+3WzkIKCRDGJiT7hlEREetURM1aSpptPcuDNNaqvPQaGDyYTbHZeUf99VPZW9nK7AjA==}
+    dev: false
 
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
