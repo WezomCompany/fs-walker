@@ -1,6 +1,6 @@
 {
   "name": "@wezom/fs-walker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "FS helper tools",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
