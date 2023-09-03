@@ -61,7 +61,6 @@
     "del-cli": "^5.0.0",
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^8.9.0",
-    "glob": "^10.3.3",
     "istanbul-badges-readme": "^1.8.5",
     "jsdom": "^22.1.0",
     "prettier": "^3.0.0",
@@ -70,6 +69,7 @@
     "vitest": "^0.34.1"
   },
   "dependencies": {
+    "glob": "^10.3.3",
     "from-cwd": "^1.0.1"
   }
 }
