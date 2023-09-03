@@ -88,10 +88,17 @@ describe('FileSource', () => {
 		expect(fileSource.exists()).toBe(false);
 	});
 
-	it('Should return parent directory path', () => {
-		const fileSource = new FileSource(
-			'./src/__specs__/fixtures/demo.txt'
+	it('Should return absolute path', () => {
+		const fileSource = new FileSource('./src/__specs__/fixtures/demo.json');
+		expect(fileSource.getAbsolutePath()).toBe(
+			fromCwd('./src/__specs__/fixtures/demo.json')
 		);
-		expect(fileSource.getDirPath()).toBe(fromCwd('./src/__specs__/fixtures'));
+	});
+
+	it('Should return parent directory path', () => {
+		const fileSource = new FileSource('./src/__specs__/fixtures/demo.txt');
+		expect(fileSource.getDirPath()).toBe(
+			fromCwd('./src/__specs__/fixtures')
+		);
 	});
 });

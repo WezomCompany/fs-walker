@@ -33,6 +33,10 @@ export class FileSource {
 		return fs.existsSync(this.source) && fs.lstatSync(this.source).isFile();
 	}
 
+	getAbsolutePath(): string {
+		return this.source;
+	}
+
 	getDirPath(): string {
 		return path.dirname(this.source);
 	}
