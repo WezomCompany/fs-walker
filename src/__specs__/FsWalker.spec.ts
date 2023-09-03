@@ -13,4 +13,9 @@ describe('FsWalker', () => {
 		expect(sources).toHaveLength(4);
 		expect(allIsFileSource).toBe(true);
 	});
+
+	it('Should return the FileSource', () => {
+		const file = FsWalker.makeFile('src/__specs__/fixtures/glob-1/f1.md');
+		expect(file.readAsText().trim()).toBe('# F1');
+	});
 });
