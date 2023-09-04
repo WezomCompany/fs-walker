@@ -1,3 +1,8 @@
+/**
+ * @fileOverview FileSource tasks:
+ * - [ ] Add safe mode for read, write and remove methods (GitHub issue #1)
+ */
+
 import fromCwd from 'from-cwd';
 import fs from 'node:fs';
 import { describe, expect, it } from 'vitest';
