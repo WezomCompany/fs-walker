@@ -11,7 +11,9 @@ describe('FsWalker', () => {
 	});
 
 	it('Should read search pattern and return array of the FileSource', () => {
-		const sources = FsWalker.defineFilesByMask('src/__specs__/fixtures/glob-1/*.{md,mdx}');
+		const sources = FsWalker.defineFilesByMask(
+			'src/__specs__/fixtures/glob-1/*.{md,mdx}'
+		);
 		const allIsFileSource = sources.every((source) => {
 			return expect(source).toBeInstanceOf(FileSource);
 		});

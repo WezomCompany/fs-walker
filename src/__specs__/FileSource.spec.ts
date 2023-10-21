@@ -59,10 +59,20 @@ describe('FileSource', () => {
 		const fileSource = new FileSource(
 			'./src/__specs__/fixtures/write/non-existent/demo.txt'
 		);
-		const throwFn = (): void => {
+		expect((): void => {
 			fileSource.write('Hello world!\n');
-		};
-		expect(throwFn).toThrow();
+		}).toThrow();
+	});
+
+	it('Should create directory if not exists', () => {
+		const randomDirName = makeRandomDir(10);
+		const fileSource = new FileSource(
+			`./src/__specs__/fixtures/write/random-non-existent/${randomDirName}/demo.txt`
+		);
+		fileSource.makeSourceDirIfNotExists();
+		expect((): void => {
+			fileSource.write('Hello world!\n');
+		}).not.toThrow();
 	});
 
 	it('Should remove file', () => {
@@ -107,3 +117,16 @@ describe('FileSource', () => {
 		);
 	});
 });
+
+function makeRandomDir(dirNameLength: number): string {
+	let result = '';
+	const characters =
+		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	const length = characters.length;
+	let counter = 0;
+	while (counter < dirNameLength) {
+		result += characters.charAt(Math.floor(Math.random() * length));
+		counter += 1;
+	}
+	return result;
+}

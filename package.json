@@ -69,7 +69,8 @@
     "vitest": "^0.34.1"
   },
   "dependencies": {
+    "from-cwd": "^1.0.1",
     "glob": "^10.3.3",
-    "from-cwd": "^1.0.1"
+    "mkdirp": "^3.0.1"
   }
 }

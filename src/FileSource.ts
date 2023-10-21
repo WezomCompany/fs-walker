@@ -1,4 +1,5 @@
 import fromCwd from 'from-cwd';
+import { mkdirp } from 'mkdirp';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -35,6 +36,10 @@ export class FileSource {
 
 	getAbsolutePath(): string {
 		return this.source;
+	}
+
+	makeSourceDirIfNotExists(): void {
+		mkdirp.sync(this.getDirPath());
 	}
 
 	getDirPath(): string {
